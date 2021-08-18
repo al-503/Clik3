@@ -6,9 +6,9 @@ require "open-uri"
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Restaurant.destroy_all
 User.destroy_all
 Dish.destroy_all
+Restaurant.destroy_all
 
 # Users #
 user1 = User.create!(first_name: "Marceline", last_name: "Dupont", email: "test@test.fr", password:"123456")
@@ -34,10 +34,10 @@ crocodillo.photos.attach(io: file, filename: "mexicain.jpg", content_type: 'imag
 el_caliente.save!
 
 # dishes caliente #
-#natchos = Dish.create!(name: "Natcho", price: 9, preptime: 8, description:"avocado, tomate, epices, creme, natchos")
-#file = File.open("db/fixtures/images_dish/natchos.jpg")
-#natchos.photo.attach(io: file, filename: "natchos.jpg", content_type: 'image/png')
-#natchos.save!
+natchos = Dish.create!(name: "Natcho", price: 9, preptime: 8, description:"avocado, tomate, epices, creme, natchos", restaurant: el_caliente)
+file = File.open("db/fixtures/images_dish/natchos.jpg")
+natchos.photo.attach(io: file, filename: "natchos.jpg", content_type: 'image/png')
+natchos.save!
 
 #burritos = Dish.create!(name: "Burrito", price: 9, preptime: 8, description:"muy caliente")
 #file = File.open("db/fixtures/images_dish/burritos.jpg")
@@ -46,10 +46,10 @@ el_caliente.save!
 
 
 # dishes crocodillo #
-#napolitaine = Dish.create!(name: "Napolitaine", price: 9, preptime: 15, description:"tomate, olive, mozzarella")
-#file = File.open("db/fixtures/images_dish/napolitaine.jpg")
-#napolitaine.photo.attach(io: file, filename: "napolitaine.jpg", content_type: 'image/png')
-#napolitaine.save!
+napolitaine = Dish.create!(name: "Napolitaine", price: 9, preptime: 15, description:"tomate, olive, mozzarella", restaurant: crocodillo)
+file = File.open("db/fixtures/images_dish/napolitaine.jpg")
+napolitaine.photo.attach(io: file, filename: "napolitaine.jpg", content_type: 'image/png')
+napolitaine.save!
 
 #peperonie = Dish.create!(name: "Peperonie", price: 10, preptime: 15, description:"tomate, olive, mozzarella, peperonie")
 #file = File.open("db/fixtures/images_dish/peperonie.jpg")
