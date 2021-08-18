@@ -39,10 +39,10 @@ file = File.open("db/fixtures/images_dish/natchos.jpg")
 natchos.photo.attach(io: file, filename: "natchos.jpg", content_type: 'image/png')
 natchos.save!
 
-#burritos = Dish.create!(name: "Burrito", price: 9, preptime: 8, description:"muy caliente")
-#file = File.open("db/fixtures/images_dish/burritos.jpg")
-#burritos.photo.attach(io: file, filename: "burritos.jpg", content_type: 'image/png')
-#burritos.save!
+burritos = Dish.create!(name: "Burrito", price: 9, preptime: 8, description:"muy caliente", restaurant: el_caliente)
+file = File.open("db/fixtures/images_dish/burritos.jpg")
+burritos.photo.attach(io: file, filename: "burritos.jpg", content_type: 'image/png')
+burritos.save!
 
 
 # dishes crocodillo #
@@ -51,7 +51,7 @@ file = File.open("db/fixtures/images_dish/napolitaine.jpg")
 napolitaine.photo.attach(io: file, filename: "napolitaine.jpg", content_type: 'image/png')
 napolitaine.save!
 
-#peperonie = Dish.create!(name: "Peperonie", price: 10, preptime: 15, description:"tomate, olive, mozzarella, peperonie")
-#file = File.open("db/fixtures/images_dish/peperonie.jpg")
-#peperonie.photo.attach(io: file, filename: "peperonie.jpg", content_type: 'image/png')
-#peperonie.save!
+peperonie = Dish.create!(name: "Peperonie", price: 10, preptime: 15, description:"tomate, olive, mozzarella, peperonie", restaurant: crocodillo)
+file = File.open("db/fixtures/images_dish/peperonie.jpg")
+peperonie.photo.attach(io: file, filename: "peperonie.jpg", content_type: 'image/png')
+peperonie.save!
