@@ -1,0 +1,14 @@
+.restaurants {
+  background-color: $white;
+}
+
+.restaurant {
+  background-color: $white;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 40%;
+  text-align: center;
+  color: $maron;
+  border: solid $maron 1px;
+  box-shadow:inner  0px 0px 2px red;
+}
