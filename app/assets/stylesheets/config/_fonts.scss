@@ -5,6 +5,10 @@
 $body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
 $title-font: 'Lobster', cursive;
+
+h1{
+  font-family: $title-font;  
+}
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
