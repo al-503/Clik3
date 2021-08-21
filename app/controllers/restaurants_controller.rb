@@ -8,4 +8,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 
+  def restaurant_params
+    params(:restaurant).permit(:photos)
+  end
 end

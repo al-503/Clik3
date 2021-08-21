@@ -30,7 +30,7 @@ crocodillo.save!
 
 el_caliente = Restaurant.create!(full_name: "el Caliente", speciality: "Mexican", adress:" 25 Boulevard de Metz 35, 35700 Rennes", phone_number:"0645478952")
 file = File.open("db/fixtures/images_restaurant/mexicain.jpg")
-crocodillo.photos.attach(io: file, filename: "mexicain.jpg", content_type: 'image/png')
+el_caliente.photos.attach(io: file, filename: "mexicain.jpg", content_type: 'image/png')
 el_caliente.save!
 
 # dishes caliente #
