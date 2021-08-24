@@ -1,17 +1,16 @@
 <div class="main">
   <div class="banner">
-    <!----- manque image----->
-    
+
+    <%= @restaurant.photos.each_with_index do |photo, index| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400 %>
+    <% end %>
+
     <h2><%= @restaurant.full_name %></h2>
     <p><%= @restaurant.speciality %></p>
-      <%= @restaurant.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 300, width: 400 %>
-      <% end %>
   </div>
 
   <div class="dishes">
     <div class="dish">
-    
       <!----index dishes------>
     </div>
   </div>

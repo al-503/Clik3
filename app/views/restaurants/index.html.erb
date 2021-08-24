@@ -8,6 +8,10 @@
         <p><%= r.phone_number %></p>
         <p><%= r.adress %></p>
 
+          <%= r.photos.each_with_index do |photo, index| %>
+            <%= cl_image_tag photo.key, height: 300, width: 400 %>
+          <% end %>
+          
       <% end %>
     </div>
   <% end %>
