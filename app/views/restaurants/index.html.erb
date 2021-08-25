@@ -1,11 +1,14 @@
 <div class="restaurants">
+  <!------------barre de navigations---------------->
+  <%= render 'shared/navbar' %>
+
   <% @restaurants.each do |r|%>
     <div class="restaurant">
       <%= link_to restaurant_path(r) do %>
 
         <h2><%= r.full_name %></h2>
         <h3><%= r.speciality %></h3>
-        <p><%= r.phone_number %></p>
+        <p>0<%= r.phone_number %></p>
         <p><%= r.adress %></p>
 
           <%= r.photos.each_with_index do |photo, index| %>
