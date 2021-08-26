@@ -26,6 +26,8 @@ user2.save!
 crocodillo = Restaurant.create!(full_name: "il Crocodillo", speciality: "Italian", adress:"4 rue du général Guillaudot, Rennes", phone_number:"0615784952")
 file = File.open("db/fixtures/images_restaurant/italien.jpg")
 crocodillo.photos.attach(io: file, filename: "italien.jpg", content_type: 'image/png')
+file1 = File.open("db/fixtures/images_restaurant/italien3.jpg")
+crocodillo.photos.attach(io: file1, filename: "italien3.jpg", content_type: 'image/png')
 crocodillo.save!
 
 el_caliente = Restaurant.create!(full_name: "el Caliente", speciality: "Mexican", adress:" 25 Boulevard de Metz 35, 35700 Rennes", phone_number:"0645478952")

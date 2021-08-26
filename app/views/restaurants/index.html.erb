@@ -5,16 +5,18 @@
   <% @restaurants.each do |r|%>
     <div class="restaurant">
       <%= link_to restaurant_path(r) do %>
+        <div class="restaurant-head">
+          <%= cl_image_tag r.photos.first.key, class:"restaurant-pic" %>
+          <h3 class="type"><%= r.speciality %></h3>
+        </div>
 
         <h2><%= r.full_name %></h2>
-        <h3><%= r.speciality %></h3>
         <p>0<%= r.phone_number %></p>
-        <p><%= r.adress %></p>
 
-          <%= r.photos.each_with_index do |photo, index| %>
-            <%= cl_image_tag photo.key, height: 300, width: 400 %>
-          <% end %>
-          
+          <!----ça ne fonctionnent pas bien ça maffiche une phrase active record------>
+        <!-----<%= r.photos.each_with_index do |photo, index| %>---->
+        <!-----<%= cl_image_tag photo.key, height: 300, width: 400 %>---->
+        <!-----<% end %>---->    
       <% end %>
     </div>
   <% end %>
