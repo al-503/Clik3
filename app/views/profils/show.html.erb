@@ -1,1 +1,13 @@
-profil du current user
+<div class="profil-body">
+
+  <%= render 'shared/navbar2' %>
+
+  <div class="profil-head">
+    <%= cl_image_tag current_user.photo.key, class:"profil-pic" %>
+    <h1 class="profil-name"><%= current_user.first_name %></h1>
+  </div>
+
+  <div class="order-hist">
+    <!-----------futur historic-------------------->
+  </div>
+</div>

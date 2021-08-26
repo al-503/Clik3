@@ -6,12 +6,27 @@
   background-color: $white;
   margin: 0 auto;
   margin-top: 50px;
-  width: 40%;
+  width: 30%;
   text-align: center;
   color: $maron;
-  border: solid $maron 1px;
 }
-a{
+
+.restaurant-pic {
+  border-radius: 6px;
+  width: 70%;
+}
+
+.restaurant-head {
+  color: white;
+  text-shadow: 1px 1px 1px $maron;
+}
+
+.type{
+  position: relative;
+  bottom: 3em;
+}
+
+a {
   text-decoration: none;
   color: black;
     &:hover{
