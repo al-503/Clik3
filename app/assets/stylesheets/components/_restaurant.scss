@@ -1,0 +1,31 @@
+.main {
+  background-color: $white;
+  margin: 0 auto;
+}
+
+.banner {
+  color: $white;
+  text-shadow: -2px -2px 2px black;
+  text-align: center;
+}
+
+.ban-rest-name {
+  position: absolute;
+  top:28%;
+  left: 15%;
+}
+
+.banner-img {
+  width: 80%;
+  height: 300px;
+  object-fit: cover; /* comme backgroud size cover*/
+  image-rendering: auto;
+  border-radius: 80% 20% 87% 13% / 42% 72% 28% 58%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.dishes {
+  width: 50%;
+  height: 25%;
+}

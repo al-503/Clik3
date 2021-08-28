@@ -1,12 +1,13 @@
 <div class="main">
   <div class="banner">
 
-    <%= @restaurant.photos.each_with_index do |photo, index| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400 %>
-    <% end %>
+    <%= cl_image_tag @restaurant.photos.first.key, class:"banner-img" %>
 
-    <h2><%= @restaurant.full_name %></h2>
-    <p><%= @restaurant.speciality %></p>
+    <div class="ban-rest-name">
+      <h2><%= @restaurant.full_name %></h2>
+      <p><%= @restaurant.speciality %></p>
+    </div>
+    
   </div>
 
   <div class="dishes">
